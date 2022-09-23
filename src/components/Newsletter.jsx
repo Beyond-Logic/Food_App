@@ -19,9 +19,9 @@ const Newsletter = () => {
           <input
             type="email"
             placeholder="gregphillips@gmail.com"
-            className="rounded-md px-4 py-1 h-[51px]"
+            className="rounded-md px-4 py-1 h-[51px] w-full"
           />
-          <button className="bg-[#FBDDBB] py-4 text-sm rounded-md h-[51px] flex items-center md:mt-0 mt-4 justify-center">
+          <button className="bg-[#FBDDBB] py-4 text-sm rounded-md h-[51px] flex items-center md:mt-0 mt-4 justify-center w-full">
             <span className="xl:w-[200px] w-[280px] font-medium text-[#00302E] leading-relaxed text-center">
               Get notified
             </span>

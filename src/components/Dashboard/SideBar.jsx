@@ -26,19 +26,18 @@ const SideBar = ({ handleShowCart, handleShowOrder, handleShowAbout }) => {
 
   return (
     <div className="bg-[#FBFBFB] lg:w-[24%] lg:py-20 py-8 px-10 ">
-      <Link to="/">
-        <div className="flex lg:space-x-4 space-x-2 lg:justify-center items-end">
-          <img
-            src={Logo}
-            alt="Lilies Food App"
-            className="md:w-14 md:h-16 w-10"
-          />
+      <div className="flex lg:space-x-4 space-x-2 lg:justify-center items-end">
+        <img
+          src={Logo}
+          alt="Lilies Food App"
+          className="md:w-14 md:h-16 w-10"
+        />
 
-          <h1 className="font-bold text-[#00302E] md:text-3xl text-2xl leading-normal tracking-wider">
-            Lilies{" "}
-          </h1>
-        </div>
-      </Link>
+        <h1 className="font-bold text-[#00302E] md:text-3xl text-2xl leading-normal tracking-wider">
+          Lilies{" "}
+        </h1>
+      </div>
+
       <div
         className="flex lg:hidden absolute top-11 right-11 cursor-pointer"
         onClick={() => setShowMobileMenu(true)}
