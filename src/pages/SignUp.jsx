@@ -27,7 +27,7 @@ const SignUp = () => {
         buttonText="SIGN UP"
         signUp={true}
         showPassword={handleShowPassword}
-        showText="absolute top-80 -mt-3 md:right-28 right-16 cursor-pointer"
+        showText="absolute -top-16  -mt-4 md:right-5 right-4 cursor-pointer"
         titleLink="/"
         onSubmit={handleSubmitSignUp}
         // SignUpText="Create an account"

@@ -25,7 +25,7 @@ const Login = () => {
       ForgotPasswordText="Forgot Password"
       login={true}
       showPassword={handleShowPassword}
-      showText="absolute top-52 md:right-28 right-16 cursor-pointer"
+      showText="absolute -top-20 md:right-5 mt-[0.5px] right-4 cursor-pointer"
       titleLink="/"
       onSubmit={handleLogin}
       disabled={!validateEmail(email) || password.length < 1 ? true : false}
