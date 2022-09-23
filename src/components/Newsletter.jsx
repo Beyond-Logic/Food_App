@@ -14,7 +14,7 @@ const Newsletter = () => {
           price list of have promos!
         </p>
       </div>
-      <div className="mt-8 sm:w-full m-auto">
+      <div className="mt-8 sm:w-full w-[95%] m-auto">
         <div className="flex md:flex-row flex-col md:space-x-2 items-center justify-center ">
           <input
             type="email"
