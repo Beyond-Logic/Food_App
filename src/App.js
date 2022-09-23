@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import { Home, Login, SignUp, Dashboard } from "./pages";
+import { StateContext } from "./context/StateContext";
+import { Toaster } from "react-hot-toast";
+import { ProductDetail } from "./components/Dashboard";
 
 function App() {
+  const loggedIn = sessionStorage.getItem("key");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <StateContext>
+        <Toaster />
+        <Routes>
+          <Route exact path="/" element={loggedIn ? <Dashboard /> : <Home />} />
+          <Route
+            exact
+            path={`${loggedIn ? "/dashboard" : "/login"}`}
+            element={loggedIn ? <Dashboard /> : <Login />}
+          />
+          <Route
+            exact
+            path={`${loggedIn ? "/dashboard" : "/signup"}`}
+            element={loggedIn ? <Dashboard /> : <SignUp />}
+          />
+          <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/product/:id" element={<ProductDetail />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </StateContext>
+    </Router>
   );
 }
 

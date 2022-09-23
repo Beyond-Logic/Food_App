@@ -1,0 +1,42 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+body {
+  background: #00302e;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+}
+
+.footer,
+.footer h1,
+.footer h4 {
+  font-family: "Inter", sans-serif;
+}
+
+.form input::placeholder {
+  color: #00302e87;
+}
+
+.form input:-ms-input-placeholder {
+  color: #00302e87;
+}
+
+.form input::-ms-input-placeholder {
+  color: #00302e87;
+}
+
+input:focus {
+  outline: none;
+}
