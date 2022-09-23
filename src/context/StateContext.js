@@ -7,9 +7,7 @@ const Context = createContext();
 
 export const StateContext = ({ children }) => {
   const [firstName, setFirstName] = useState("");
-  // const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [showCart, setShowCart] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
   const getLocalStorage = (name) => {
@@ -29,6 +27,7 @@ export const StateContext = ({ children }) => {
   const [showProductDetail, setShowProductDetail] = useState(false);
   const [showProductDetailData, setShowProductDetailData] = useState(null);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showMobileMenuLanding, setShowMobileMenuLanding] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [showOrder, setShowOrder] = useState(false);
@@ -77,14 +76,6 @@ export const StateContext = ({ children }) => {
   const onChangePassword = (e) => {
     setPassword(e.target.value);
   };
-
-  // useEffect(() => {
-  //   setForm({
-  //     firstName,
-  //     email,
-  //     password,
-  //   });
-  // }, [firstName, email, password]);
 
   const handleSubmitSignUp = () => {
     try {
@@ -147,11 +138,6 @@ export const StateContext = ({ children }) => {
       (cartProduct) => cartProduct._id === product._id
     );
 
-    // setTotalPrice(
-    //   (prevTotalPrice) => prevTotalPrice + product.price * quantity
-    // );
-    // setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
-
     if (checkProductInCart) {
       setTotalPrice(totalPrice + product.price * quantity);
       setTotalQuantities(totalQuantities + quantity);
@@ -198,8 +184,6 @@ export const StateContext = ({ children }) => {
   const toggleCartItemQuantity = (id, value) => {
     findProduct = cartItems.find((item) => item._id === id);
     index = cartItems.findIndex((product) => product._id === id);
-
-    // const newCartItems = cartItems.filter((item) => item._id !== id);
     if (value === "inc") {
       findProduct.quantity += 1;
       cartItems[index] = findProduct;
@@ -279,9 +263,6 @@ export const StateContext = ({ children }) => {
     onSuccess: (reference) => handlePayStackSuccessAction(reference),
     onClose: handlePayStackCloseAction,
   };
-
-  // console.log(cartItems);
-  // console.log(cartItems.length);
   var date = new Date();
   var hours = date.getHours();
 
@@ -303,6 +284,8 @@ export const StateContext = ({ children }) => {
         setShowAbout,
         showProductDetail,
         showMobileMenu,
+        showMobileMenuLanding,
+        setShowMobileMenuLanding,
         setShowMobileMenu,
         setShowProductDetail,
         showProductDetailData,
