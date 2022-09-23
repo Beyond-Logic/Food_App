@@ -7,7 +7,6 @@ import ProfileIcon from "../../assets/ProfileIcon.svg";
 import OrderIcon from "../../assets/OrderIcon.svg";
 import CartIcon from "../../assets/CartIcon.svg";
 import DashBoardMenuItem from "./DashBoardMenuItem";
-import { Link } from "react-router-dom";
 import { useStateContext } from "../../context/StateContext";
 import {
   AiOutlineMenu,
@@ -78,7 +77,7 @@ const SideBar = ({ handleShowCart, handleShowOrder, handleShowAbout }) => {
               onClick={handleShowCart}
               cartQty={totalQuantities >= 1 ? totalQuantities : ""}
             />
-            <div className="flex justify-center items-center space-x-3">
+            <div className="flex justify-center items-center space-x-3 cursor-pointer">
               <AiOutlineLogout />
               <h4 className="text-center font-normal" onClick={logOut}>
                 Logout
