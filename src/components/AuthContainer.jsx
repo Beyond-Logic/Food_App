@@ -22,7 +22,7 @@ const AuthContainer = ({
 }) => {
   const { setShowMobileMenuLanding, show } = useStateContext();
   return (
-    <div className="flex lg:flex-row flex-col justify-between items-center md:bg-[#FBDDBB] bg-white md:h-screen md:py-0 h-full pt-24">
+    <div className="flex lg:flex-row flex-col justify-between items-center lg:bg-[#FBDDBB] bg-white lg:h-screen lg:py-0 h-full pt-24">
       <div
         className="flex-1 lg:flex hidden"
         style={{
