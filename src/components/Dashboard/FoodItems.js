@@ -56,7 +56,7 @@ const FoodItems = [
   {
     _id: uuid(),
     image: Food5,
-    name: "Toasted Bread",
+    name: "Baked Fruit Bread",
     description: "The in-house pasta and chicken by chef Moose",
     detailDescription: `Just have a single bite of this Black Forest pastry and it will all make a proper sense to you. The kick of cherry and rich chocolate of this super light, airy pastry will definitely make you feel "wow". The perfect combination of cherry cream and rich chocolate can provide the ultimate fulfillment to your dessert craving.`,
     price: 2000,
