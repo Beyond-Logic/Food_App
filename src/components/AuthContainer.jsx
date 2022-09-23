@@ -35,7 +35,7 @@ const AuthContainer = ({
         }}
       ></div>
       <div className="bg-white md:flex-1  w-full flex flex-col items-center justify-center md:mt-0 h-full">
-        <div className="flex flex-col justify-center text-center w-full md:px-20 px-12 lg:py-0 py-20 md:mt-20 lg:mt-10 ">
+        <div className="flex flex-col justify-center text-center w-full md:px-20 px-12 lg:py-0 py-20 md:mt-10 lg:mt-10 ">
           <h1
             className="text-2xl font-semibold mb-14 text-[#00302E] cursor-pointer "
             onClick={() => setShowMobileMenuLanding(false)}
