@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { useStateContext } from "../context/StateContext";
 
 const AuthContainer = ({
   LoginSignUpBg,
@@ -18,6 +19,7 @@ const AuthContainer = ({
   onSubmit,
   disabled,
 }) => {
+  const { setShowMobileMenuLanding } = useStateContext();
   return (
     <div className="flex md:flex-row flex-col justify-between items-center md:bg-[#FBDDBB] bg-white md:h-screen md:py-0">
       <div
@@ -32,7 +34,10 @@ const AuthContainer = ({
       ></div>
       <div className="bg-white md:flex-1 h-screen w-full flex flex-col items-center justify-center md:mt-0">
         <div className="flex flex-col text-center w-full md:px-20 px-12 form relative">
-          <h1 className="text-2xl font-semibold mb-14 text-[#00302E] cursor-pointer">
+          <h1
+            className="text-2xl font-semibold mb-14 text-[#00302E] cursor-pointer"
+            onClick={() => setShowMobileMenuLanding(false)}
+          >
             <Link to={titleLink}>{title}</Link>
           </h1>
           {children}
