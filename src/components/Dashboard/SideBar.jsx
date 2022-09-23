@@ -23,6 +23,7 @@ const SideBar = ({ handleShowCart, handleShowOrder, handleShowAbout }) => {
     setShowMobileMenu,
     logOut,
   } = useStateContext();
+
   return (
     <div className="bg-[#FBFBFB] lg:w-[24%] lg:py-20 py-8 px-10 ">
       <Link to="/">

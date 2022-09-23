@@ -5,7 +5,6 @@ import { AuthContainer } from "../components";
 import SignUpBg from "../assets/SignUpBg.svg";
 import { useStateContext } from "../context/StateContext";
 
-
 const SignUp = () => {
   const {
     firstName,
@@ -28,7 +27,7 @@ const SignUp = () => {
         buttonText="SIGN UP"
         signUp={true}
         showPassword={handleShowPassword}
-        showText="absolute top-80 md:right-28 right-16 cursor-pointer -mt-4"
+        showText="absolute top-80 -mt-3 md:right-28 right-16 cursor-pointer"
         titleLink="/"
         onSubmit={handleSubmitSignUp}
         // SignUpText="Create an account"

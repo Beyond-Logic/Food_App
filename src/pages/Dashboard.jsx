@@ -21,21 +21,13 @@ const Dashboard = ({ product }) => {
     showOrder,
     setShowOrder,
     showProductDetail,
-    setShowProductDetail,
-    setQty,
+
     showAbout,
     setShowAbout,
 
+    handleShowModal,
     message,
   } = useStateContext();
-
-  const handleShowModal = () => {
-    setShowOrder(false);
-    setShowProductDetail(false);
-    setShowCart(false);
-    setShowAbout(false);
-    setQty(1);
-  };
 
   return (
     <div className="h-full relative scrollbar-hide overflow-y-hidden">

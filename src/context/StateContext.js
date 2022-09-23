@@ -9,6 +9,7 @@ export const StateContext = ({ children }) => {
   const [firstName, setFirstName] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [show, setShow] = useState(true);
 
   const getLocalStorage = (name) => {
     if (typeof window !== "undefined") {
@@ -63,6 +64,7 @@ export const StateContext = ({ children }) => {
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
+    showPassword ? setShow(true) : setShow(false);
   };
 
   const onChangeName = (e) => {
@@ -75,6 +77,16 @@ export const StateContext = ({ children }) => {
 
   const onChangePassword = (e) => {
     setPassword(e.target.value);
+  };
+
+  const handleShowModal = () => {
+    setShowOrder(false);
+    setShowProductDetail(false);
+    setShowCart(false);
+    setShowAbout(false);
+    setShowMobileMenu(false);
+    setShowMobileMenuLanding(false);
+    setQty(1);
   };
 
   const handleSubmitSignUp = () => {
@@ -128,6 +140,13 @@ export const StateContext = ({ children }) => {
       sessionStorage.removeItem("key");
       toast.success("Logout Successful");
       navigate("/");
+      setShowOrder(false);
+      setShowProductDetail(false);
+      setShowCart(false);
+      setShowAbout(false);
+      setShowMobileMenu(false);
+      setShowMobileMenuLanding(false);
+      setQty(1);
     } catch (error) {
       console.log(error);
     }
@@ -287,6 +306,7 @@ export const StateContext = ({ children }) => {
         showMobileMenuLanding,
         setShowMobileMenuLanding,
         setShowMobileMenu,
+        handleShowModal,
         setShowProductDetail,
         showProductDetailData,
         setShowProductDetailData,
@@ -302,6 +322,7 @@ export const StateContext = ({ children }) => {
         firstName,
         email,
         password,
+        show,
         onChangeName,
         onChangeEmail,
         onChangePassword,

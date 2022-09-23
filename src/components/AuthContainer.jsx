@@ -3,6 +3,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useStateContext } from "../context/StateContext";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 const AuthContainer = ({
   LoginSignUpBg,
@@ -19,7 +20,7 @@ const AuthContainer = ({
   onSubmit,
   disabled,
 }) => {
-  const { setShowMobileMenuLanding } = useStateContext();
+  const { setShowMobileMenuLanding, show } = useStateContext();
   return (
     <div className="flex md:flex-row flex-col justify-between items-center md:bg-[#FBDDBB] bg-white md:h-screen md:py-0">
       <div
@@ -42,7 +43,7 @@ const AuthContainer = ({
           </h1>
           {children}
           <div className={showText} onClick={showPassword}>
-            Show
+            {show ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
           </div>
 
           <button
