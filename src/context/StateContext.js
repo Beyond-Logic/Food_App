@@ -24,7 +24,7 @@ export const StateContext = ({ children }) => {
     }
   };
 
-  const [email, setEmail] = useState(getLocalStorage("email").toLowerCase());
+  const [email, setEmail] = useState(getLocalStorage("email"));
   const [showProductDetail, setShowProductDetail] = useState(false);
   const [showProductDetailData, setShowProductDetailData] = useState(null);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
