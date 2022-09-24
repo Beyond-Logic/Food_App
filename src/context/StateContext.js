@@ -99,8 +99,11 @@ export const StateContext = ({ children }) => {
         "key",
         Math.floor(1000000000000000 + Math.random() * 9000000000000000)
       );
+      setInterval(() => {
+        window.location = "/dashboard";
+      }, 200);
       toast.success(`Signup Successful`);
-      navigate("/dashboard");
+      // navigate("/dashboard");
     } catch (error) {
       console.log(error);
       toast.error(`Something went wrong`);
@@ -126,7 +129,10 @@ export const StateContext = ({ children }) => {
           "key",
           Math.floor(1000000000000000 + Math.random() * 9000000000000000)
         );
-        navigate("/dashboard");
+        setInterval(() => {
+          window.location = "/dashboard";
+        }, 200);
+        // navigate("/dashboard");
         toast.success(`Login Successful`);
       } else {
         toast.error(`Incorrect Login`);
@@ -141,7 +147,12 @@ export const StateContext = ({ children }) => {
     try {
       sessionStorage.removeItem("key");
       toast.success("Logout Successful");
-      navigate("/");
+
+      setInterval(() => {
+        window.location = "/";
+      }, 200);
+
+      // navigate("/");
       setShowOrder(false);
       setShowProductDetail(false);
       setShowCart(false);

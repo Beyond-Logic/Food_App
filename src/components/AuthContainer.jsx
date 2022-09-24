@@ -74,7 +74,7 @@ const AuthContainer = ({
             <div className="text-[#00302EE8] opacity-90 hover:opacity-100 lg:mb-4 ">
               Already have an account.{" "}
               <Link to="/login">
-                <span className="font-bold">LOGINs</span>
+                <span className="font-bold">LOGIN</span>
               </Link>
             </div>
           )}
