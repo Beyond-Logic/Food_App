@@ -1,6 +1,6 @@
 <!-- @format -->
 
-#Food App Project
+# Food App Project
 
 <img src="./src/assets/FoodAppLanding.png" alt="food_app_landing">
 
