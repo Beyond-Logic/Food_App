@@ -147,11 +147,12 @@ export const StateContext = ({ children }) => {
   const logOut = () => {
     try {
       sessionStorage.removeItem("key");
-      toast.success("Logout Successful");
 
       setInterval(() => {
         window.location = "/";
       }, 200);
+
+      toast.success("Logout Successful");
 
       // navigate("/");
       setShowOrder(false);
