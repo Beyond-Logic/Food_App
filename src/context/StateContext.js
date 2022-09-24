@@ -46,7 +46,7 @@ export const StateContext = ({ children }) => {
   const [qty, setQty] = useState(1);
 
   useEffect(() => {
-    localStorage.setItem("email", JSON.stringify(email.toLowerCase()));
+    localStorage.setItem("email", JSON.stringify(email));
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     localStorage.setItem("orderItems", JSON.stringify(orderItems));
     localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
@@ -149,8 +149,7 @@ export const StateContext = ({ children }) => {
       sessionStorage.removeItem("key");
 
       setInterval(() => {
-        // window.location = "/";
-        navigate("/");
+        window.location = "/";
       }, 1000);
 
       toast.success("Logout Successful");
