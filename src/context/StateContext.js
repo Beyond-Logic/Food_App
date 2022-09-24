@@ -24,7 +24,7 @@ export const StateContext = ({ children }) => {
     }
   };
 
-  const [email, setEmail] = useState(getLocalStorage("email"));
+  const [email, setEmail] = useState(getLocalStorage("email").toLowerCase());
   const [showProductDetail, setShowProductDetail] = useState(false);
   const [showProductDetailData, setShowProductDetailData] = useState(null);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -46,7 +46,7 @@ export const StateContext = ({ children }) => {
   const [qty, setQty] = useState(1);
 
   useEffect(() => {
-    localStorage.setItem("email", JSON.stringify(email));
+    localStorage.setItem("email", JSON.stringify(email.toLowerCase()));
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     localStorage.setItem("orderItems", JSON.stringify(orderItems));
     localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
