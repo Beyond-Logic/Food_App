@@ -117,7 +117,7 @@ export const StateContext = ({ children }) => {
   const handleLogin = () => {
     try {
       if (
-        sessionStorage.getItem("email") === email &&
+        sessionStorage.getItem("email").toLowerCase() === email &&
         sessionStorage.getItem("password") === password
       ) {
         sessionStorage.setItem(
