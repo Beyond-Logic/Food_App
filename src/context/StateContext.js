@@ -101,7 +101,7 @@ export const StateContext = ({ children }) => {
       );
       setInterval(() => {
         navigate("/dashboard");
-      }, 200);
+      }, 2000);
       toast.success(`Signup Successful`);
       // navigate("/dashboard");
     } catch (error) {
@@ -132,7 +132,7 @@ export const StateContext = ({ children }) => {
         setInterval(() => {
           // window.location = "/dashboard";
           navigate("/dashboard");
-        }, 200);
+        }, 2000);
         // navigate("/dashboard");
         toast.success(`Login Successful`);
       } else {
@@ -150,7 +150,7 @@ export const StateContext = ({ children }) => {
 
       setInterval(() => {
         window.location = "/";
-      }, 200);
+      }, 2000);
 
       toast.success("Logout Successful");
 
