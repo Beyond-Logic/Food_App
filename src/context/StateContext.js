@@ -89,7 +89,8 @@ export const StateContext = ({ children }) => {
     setQty(1);
   };
 
-  const handleSubmitSignUp = () => {
+  const handleSubmitSignUp = (e) => {
+    e.preventDefault();
     try {
       sessionStorage.setItem("firstName", firstName);
       sessionStorage.setItem("email", email);
@@ -114,7 +115,8 @@ export const StateContext = ({ children }) => {
       );
   };
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     try {
       if (
         sessionStorage.getItem("email").toLowerCase() === email.toLowerCase() &&
