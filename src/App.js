@@ -9,7 +9,6 @@ import {
 import { Home, Login, SignUp, Dashboard } from "./pages";
 import { StateContext } from "./context/StateContext";
 import { Toaster } from "react-hot-toast";
-import { useEffect } from "react";
 
 function App() {
   const loggedIn = sessionStorage.getItem("key") ? true : false;
