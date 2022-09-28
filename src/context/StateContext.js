@@ -100,7 +100,8 @@ export const StateContext = ({ children }) => {
         Math.floor(1000000000000000 + Math.random() * 9000000000000000)
       );
       setInterval(() => {
-        navigate("/dashboard");
+        // navigate("/dashboard");
+        window.location = "/dashboard";
       }, 1000);
       toast.success(`Signup Successful`);
       // navigate("/dashboard");
@@ -130,8 +131,8 @@ export const StateContext = ({ children }) => {
           Math.floor(1000000000000000 + Math.random() * 9000000000000000)
         );
         setInterval(() => {
-          // window.location = "/dashboard";
-          navigate("/dashboard");
+          window.location = "/dashboard";
+          // navigate("/dashboard");
         }, 1000);
         // navigate("/dashboard");
         toast.success(`Login Successful`);
