@@ -9,10 +9,10 @@ import {
 import { Home, Login, SignUp, Dashboard } from "./pages";
 import { StateContext } from "./context/StateContext";
 import { Toaster } from "react-hot-toast";
-import { ProductDetail } from "./components/Dashboard";
 
 function App() {
-  const loggedIn = sessionStorage.getItem("key");
+  const loggedIn = sessionStorage.getItem("key") ? true : false;
+  console.log(loggedIn);
   return (
     <Router>
       <StateContext>
@@ -29,8 +29,7 @@ function App() {
             path={`${loggedIn ? "/dashboard" : "/signup"}`}
             element={loggedIn ? <Dashboard /> : <SignUp />}
           />
-          <Route exact path="/dashboard" element={<Dashboard />} />
-          <Route path="/dashboard/product/:id" element={<ProductDetail />} />
+          {/* <Route exact path="/dashboard" element={<Dashboard />} /> */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </StateContext>
