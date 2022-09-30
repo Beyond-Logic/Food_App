@@ -9,6 +9,7 @@ import {
 import { Home, Login, SignUp, Dashboard } from "./pages";
 import { StateContext } from "./context/StateContext";
 import { Toaster } from "react-hot-toast";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   const loggedIn = sessionStorage.getItem("key") ? true : false;
@@ -19,7 +20,15 @@ function App() {
       <StateContext>
         <Toaster />
         <Routes>
-          <Route exact path="/" element={loggedIn ? <Dashboard /> : <Home />} />
+          <Route
+            exact
+            path={"/"}
+            element={loggedIn ? <Dashboard /> : <Home />}
+          />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
+
           <Route
             exact
             path={`${loggedIn ? "/dashboard" : "/login"}`}
@@ -30,7 +39,7 @@ function App() {
             path={`${loggedIn ? "/dashboard" : "/signup"}`}
             element={loggedIn ? <Dashboard /> : <SignUp />}
           />
-          {/* <Route exact path="/dashboard" element={<Dashboard />} /> */}
+
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </StateContext>
