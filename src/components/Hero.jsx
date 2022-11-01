@@ -23,7 +23,7 @@ const Hero = () => {
       </div>
       <div className="flex lg:justify-start justify-center items-center text-center ">
         <img
-          src={Food1}
+          src="https://res.cloudinary.com/beyondlogic/image/upload/v1667339417/Food_App/Food1_ewlybq.svg"
           alt="Food1"
           className="lg:mt-0 mt-24 m-auto md:[w-full] w-[90%]"
         />

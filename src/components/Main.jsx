@@ -20,7 +20,7 @@ const Main = () => {
       </div>
       <div className="flex md:flex-row flex-col justify-center items-center xl:space-x-40 md:space-x-20 mt-24">
         <Meal
-          image={Pasta}
+          image="https://res.cloudinary.com/beyondlogic/image/upload/v1667339541/Food_App/Pasta_sp9qiu.svg"
           title="Stir fry Pasta"
           description="Stir fry pasta yada yada yada because of Sesan"
         />
@@ -30,7 +30,7 @@ const Main = () => {
           description="Stir fry pasta yada yada yada because of Sesan"
         />
         <Meal
-          image={Burger}
+          image="https://res.cloudinary.com/beyondlogic/image/upload/v1667339538/Food_App/Burger_mhkw3n.svg"
           title="Burger Meal"
           description="Stir fry pasta yada yada yada because of Sesan"
         />
